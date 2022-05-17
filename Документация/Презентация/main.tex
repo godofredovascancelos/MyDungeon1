@@ -1,0 +1,202 @@
+\documentclass[aspectratio=169,xcolor=dvipsnames]{beamer}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{epsfig}
+\usepackage{verbatim}
+\usepackage{gnuplottex}
+\usepackage{listings}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{booktabs}
+ 
+
+\usetheme{Simple}
+%\setbeameroption{show notes}
+
+\subtitle[короткое название]{Петрозаводский государственный университет
+Институт математики и информационных технологий
+Кафедра Информатики и математического обеспечения}
+
+\author[Автор]{Мельников Илья Евгеньевич 22207}
+\institute[ПетрГУ]
+{
+\Large{\textcolor{blue}{Разработка 2D Roguelike игры на движке Unity}} \\\vspace{20px}
+\small{Направление подготовки бакалавриата
+09.03.04 Программная инженерия
+Профиль направления подготовки бакалавриата
+“Системное и прикладное программное обеспечение”} \vspace{20px}
+
+\normalsize{Научный руководитель: к.т.н., доцент кафедры ИМО, C. А. Марченков}
+
+    \vskip 3pt
+}
+\date{} 
+
+\begin{document}
+
+\begin{frame}
+    \titlepage
+\end{frame}
+
+\begin{frame}{Выбор жанра и игрового движка}
+\begin{figure}
+\includegraphics<1->[width=1\linewidth]{pictures/1.jpg}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Цели и задачи}
+\begin{center}
+\textbf{Цели}
+\end{center}
+\begin{itemize}
+    \item Приобрести навыки и опыт работы с движком Unity.
+    \item Повысить свою квалификацию по ходу работы с C\# и системой Tilemap для Unity.
+    \item Закрепить имеющиеся навыки во время работы с:
+\end{itemize}
+
+\begin{center}
+\textbf{Задачи}
+\end{center}
+\begin{itemize}
+    \item Освоиться с интерфейсом Unity.
+    \item Создание Roguelike игры.
+    \item Сборка готового билда для скачивания другими пользователями.
+    \item Добавление контента в игру.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Создание проекта}
+\begin{figure}
+\includegraphics<1->[width=0.9\linewidth]{pictures/project.png}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Подготовка}
+\begin{figure}
+\includegraphics<1->[width=0.2\linewidth]{pictures/folders.png}
+\includegraphics<1->[width=0.7\linewidth]{pictures/layout.png}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Выбор спрайтов}
+\begin{figure}
+\includegraphics<1->[width=0.4\linewidth]{pictures/Atlas.png}
+\includegraphics<1->[width=0.2\linewidth]{pictures/sword.png}
+\includegraphics<1->[width=0.2\linewidth]{pictures/guy.png}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Написание кода}
+\begin{figure}
+
+\includegraphics<1->[width=0.35\linewidth]{pictures/player1.png}
+\includegraphics<1->[width=0.4\linewidth]{pictures/boxcoll.png}
+
+Player.cs \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Box Collider
+\end{figure}
+\end{frame}
+
+
+\begin{frame}{Написание кода}
+\begin{figure}
+
+\includegraphics<1->[width=0.35\linewidth]{pictures/level1.png}
+\includegraphics<1->[width=0.4\linewidth]{pictures/level2.png}
+
+Level 1. Main \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Level 2. Dungeon
+\end{figure}
+\end{frame}
+
+\begin{frame}{Написание кода}
+\begin{figure}
+
+\includegraphics<1->[width=0.4\linewidth]{pictures/coll.png}
+\includegraphics<1->[width=0.4\linewidth]{pictures/coll1.png}
+
+Collidable.cs \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Collectable.cs
+\end{figure}
+\end{frame}
+
+\begin{frame}{Написание кода}
+\begin{figure}
+
+\includegraphics<1->[width=0.4\linewidth]{pictures/chest.png}
+\includegraphics<1->[width=0.4\linewidth]{pictures/portal.png}
+
+Chest.cs \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Portal.cs
+\end{figure}
+\end{frame}
+
+\begin{frame}{Написание кода}
+\begin{figure}
+
+\includegraphics<1->[scale=0.24]{pictures/gm.png}
+\includegraphics<1->[scale=0.35]{pictures/fm.png}
+
+GameManager.cs \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ FloatingTextManager.cs
+\end{figure}
+\end{frame}
+
+\begin{frame}{Боевая система}
+\begin{figure}
+
+\includegraphics<1->[width=0.4\linewidth]{pictures/anim.png}
+\includegraphics<1->[width=0.4\linewidth]{pictures/mover.png}
+
+Анимация \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  Mover.cs
+\end{figure}
+\end{frame}
+
+\begin{frame}{Анимация}
+\ \\
+\begin{figure}
+\includegraphics<1->[scale=0.4]{pictures/anim1.png}
+
+Раздел анимации \\
+\
+\\
+\
+\\
+\includegraphics<1->[scale=0.4]{pictures/anim2.png} 
+
+Раздел аниматора
+\end{figure}
+\end{frame}
+
+\begin{frame}{Меню}
+\begin{figure}
+\includegraphics<1->[scale=0.4]{pictures/menu.png}
+\includegraphics<1->[scale=1.4]{pictures/hud.png}
+
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Меню \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Интерфейс
+\end{figure}
+\end{frame}
+
+\begin{frame}{Добавление контента}
+\begin{figure}
+\includegraphics<1->[scale=0.35]{pictures/boss.png}
+\includegraphics<1->[scale=1.05]{pictures/prefab.png}
+
+\ \ \ Пример уровня \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Prefab
+\end{figure}
+\end{frame}
+
+\begin{frame}{Заключение}
+
+\begin{center}
+\textbf{Выполнены задачи}
+\end{center}
+\begin{itemize}
+    \item Ознакомление с игровым движком Unity.
+    \item Создана Roguelike игра.
+    \item Собран готовый билд для скачивания желающими.
+    \item Добавлен контент в виде законченного уровня.
+\end{itemize}
+
+\vfill
+
+URL: https://github.com/godofredovascancelos/MyDungeon1
+\end{frame}
+
+\end{document}
